@@ -1,0 +1,322 @@
+<div id='page2' style="display:none">
+        <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="{% static 'logo2.png' %}" alt="" width="120" height="auto">
+          </a>
+
+       <div style="align-content: flex-end;" >
+          <a class="navbar-brand" >
+           <button type="submit" onclick="return show('page1','page2','page3','page4',page5)" style="background-color:transparent; border-color:transparent; ">
+                  <img src="{% static 'bulb.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a>
+          <a class="navbar-brand" >
+             <button type="submit" onclick="return show('page2','page1','page3','page4','page5')" style="background-color:transparent; border-color:transparent; ">
+                 <img src="{% static 'fan.png' %}" alt="" width="30" height="auto">
+             </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page3','page1','page2','page4','page5')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'gd.png' %}" alt="" width="30" height="auto">
+                  </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page4','page1','page2','page3','page5')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'camera.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page5','page1','page2','page3','page4')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'music.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a></div>
+        </div>
+      </nav>
+        <div class="container"
+             {% if user.is_authenticated %} style=" " {% else %}
+             style="pointer-events:none;"
+             {% endif %}>
+             <img src="{% static 'fan.png' %}" alt="" width="60" height="auto" style="position: absolute; top: 35%; left: 15%;" >
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <button type="button" class="btn btn-outline-secondary">&nbsp; &nbsp; Room  1&nbsp; &nbsp; </button>
+                </div>
+
+                <div class="col-md-auto" style="  display: inline-block;
+                justify-content: space-between;">
+                    <div class="form-check form-switch"  style="  display: flex; justify-content: space-between;">
+                        <form action="fan" method="get">
+                        <button class="navitem"type="submit" name="text" value="on" >ON</button>
+                        <button class="navitem"type="submit" name="text" value="off" >OFF</button>
+                        </form>
+                      </div>
+                </div>
+
+                <div class="col-md-auto" style="display: flex;
+                justify-content: space-between;">
+                    <div class="form-check">
+                        <form action="fan1" method="get">
+                        <button class="navitem"type="submit" name="text" value="H" >H</button>
+                        <button class="navitem"type="submit" name="text" value="M" >M</button>
+                        <button class="navitem"type="submit" name="text" value="L" >L</button>
+                        </form>
+                      </div>             </div>
+              </div>
+              <div class="row justify-content-md-center" style="margin-top: 10px;">
+                <div class="col-md-auto">
+
+                    <button type="button"  class="btn btn-outline-secondary">&nbsp; &nbsp; Room  2&nbsp; &nbsp; </button>
+                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check form-switch" style="  display: flex;
+                    justify-content: space-between;">
+                        <form action="fan2" method="get">
+                        <button class="navitem"type="submit" name="text2" value="on" >ON</button>
+                        <button class="navitem"type="submit" name="text2" value="off" >OFF</button>
+                        </form>
+                      </div>                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check">
+                        <form action="fan3" method="get">
+                        <button class="navitem"type="submit" name="text2" value="H" >H</button>
+                        <button class="navitem"type="submit" name="text2" value="M" >M</button>
+                        <button class="navitem"type="submit" name="text2" value="L" >L</button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+              <div class="row justify-content-md-center" style="margin-top: 10px;" >
+                <div class="col-md-auto">
+                    <button type="button"  class="btn btn-outline-secondary">&nbsp; &nbsp;  Room  3 &nbsp; &nbsp; </button>
+                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check form-switch" style="  display: flex;
+                    justify-content: space-between;">
+                        <form action="fan4" method="get">
+                       <button class="navitem"type="submit" name="text2" value="on" >ON</button>
+                            <button class="navitem"type="submit" name="text2" value="off" >OFF</button>
+                        </form>
+                      </div>                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check">
+                      <form action="fan5" method="get">
+                          <button class="navitem"type="submit" name="text2" value="H" >H</button>
+                          <button class="navitem"type="submit" name="text2" value="M" >M</button>
+                          <button class="navitem"type="submit" name="text2" value="L" >L</button>
+                      </form>
+                </div>             </div>
+              </div>
+              <div class="row justify-content-md-center"  style="margin-top: 10px;">
+                <div class="col-md-auto">
+                    <button type="button"  style="padding: 7px 16px;"  class="btn btn-outline-secondary"> &nbsp;  All Room &nbsp;  </button>
+                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check form-switch" style="  display: flex;
+                    justify-content: space-between;">
+                        <form action="fan6" method="get">
+                        <button class="navitem"type="submit" name="text2" value="on" >ON</button>
+                        <button class="navitem"type="submit" name="text2" value="off" >OFF</button>
+                        </form>
+                      </div>                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check">
+                        <form action="fan7" method="get">
+                        <button class="navitem"type="submit" name="text2" value="H" >H</button>
+                        <button class="navitem"type="submit" name="text2" value="M" >M</button>
+                        <button class="navitem"type="submit" name="text2" value="L" >L</button>
+                        </form>
+                      </div>             </div>
+              </div>
+          </div>
+   </div>
+
+
+<div id='page3' style="display:none">
+        <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="{% static 'logo2.png' %}" alt="" width="120" height="auto">
+          </a>
+
+       <div style="align-content: flex-end;" >
+          <a class="navbar-brand" >
+           <button type="submit" onclick="return show('page1','page2','page3','page4',page5)" style="background-color:transparent; border-color:transparent; ">
+                  <img src="{% static 'bulb.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a>
+          <a class="navbar-brand" >
+             <button type="submit" onclick="return show('page2','page1','page3','page4','page5')" style="background-color:transparent; border-color:transparent; ">
+                 <img src="{% static 'fan.png' %}" alt="" width="30" height="auto">
+             </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page3','page1','page2','page4','page5')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'gd.png' %}" alt="" width="30" height="auto">
+                  </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page4','page1','page2','page3','page5')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'camera.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page5','page1','page2','page3','page4')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'music.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a></div>
+        </div>
+      </nav>
+        <div class="container"
+             {% if user.is_authenticated %} style=" " {% else %}
+             style="pointer-events:none;"
+             {% endif %}>
+             <img src="{% static 'gd.png' %}" alt="" width="60" height="auto" style="position: absolute; top: 35%; left: 15%;" >
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <button type="button" class="btn btn-outline-secondary">&nbsp; &nbsp; Garage &nbsp; &nbsp; </button>
+                </div>
+
+                <div class="col-md-auto" style="  display: inline-block;
+                justify-content: space-between;">
+                    <div class="form-check form-switch"  style="  display: flex; justify-content: space-between;">
+                        <form action="garage" method="get">
+                        <button class="navitem"type="submit" name="text" value="on" >OPEN</button>
+                        <button class="navitem"type="submit" name="text" value="off" >CLOSE</button>
+                        </form>
+                      </div>
+                </div>
+
+
+   </div>
+        </div>
+</div>
+
+  <div id='page4' style="display:none">
+        <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="{% static 'logo2.png' %}" alt="" width="120" height="auto">
+          </a>
+
+       <div style="align-content: flex-end;" >
+          <a class="navbar-brand" >
+           <button type="submit" onclick="return show('page1','page2','page3','page4',page5)" style="background-color:transparent; border-color:transparent; ">
+                  <img src="{% static 'bulb.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a>
+          <a class="navbar-brand" >
+             <button type="submit" onclick="return show('page2','page1','page3','page4','page5')" style="background-color:transparent; border-color:transparent; ">
+                 <img src="{% static 'fan.png' %}" alt="" width="30" height="auto">
+             </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page3','page1','page2','page4','page5')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'gd.png' %}" alt="" width="30" height="auto">
+                  </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page4','page1','page2','page3','page5')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'camera.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page5','page1','page2','page3','page4')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'music.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a></div>
+        </div>
+      </nav>
+        <div class="container"
+             {% if user.is_authenticated %} style=" " {% else %}
+             style="pointer-events:none;"
+             {% endif %}>
+             <img src="{% static 'camera.png' %}" alt="" width="60" height="auto" style="position: absolute; top: 35%; left: 15%;" >
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <button type="button" class="btn btn-outline-secondary">&nbsp; &nbsp; Camera&nbsp; &nbsp; </button>
+                </div>
+
+                <div class="col-md-auto" style="  display: inline-block;
+                justify-content: space-between;">
+                    <div class="form-check form-switch"  style="  display: flex; justify-content: space-between;">
+                        <form action="camera" method="get">
+                        <button class="navitem"type="submit" name="text" value="on" >OPEN</button>
+                        <button class="navitem"type="submit" name="text" value="off" >CLOSE</button>
+                        </form>
+                      </div>
+                </div>
+
+   </div>
+            </div>
+      </div>
+  <div id='page5' style="display:none">
+        <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="{% static 'logo2.png' %}" alt="" width="120" height="auto">
+          </a>
+
+       <div style="align-content: flex-end;" >
+          <a class="navbar-brand" >
+           <button type="submit" onclick="return show('page1','page2','page3','page4','page5')" style="background-color:transparent; border-color:transparent; ">
+                  <img src="{% static 'bulb.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a>
+          <a class="navbar-brand" >
+             <button type="submit" onclick="return show('page2','page1','page3','page4','page5')" style="background-color:transparent; border-color:transparent; ">
+                 <img src="{% static 'fan.png' %}" alt="" width="30" height="auto">
+             </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page3','page1','page2','page4','page5')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'gd.png' %}" alt="" width="30" height="auto">
+                  </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page4','page1','page2','page3','page5')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'camera.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a>
+          <a class="navbar-brand" href="#">
+              <button type="submit" onclick="return show('page5','page1','page2','page3','page4')" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'music.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a></div>
+        </div>
+      </nav>
+        <div class="container"
+             {% if user.is_authenticated %} style=" " {% else %}
+             style="pointer-events:none;"
+             {% endif %}>
+             <img src="{% static 'music.png' %}" alt="" width="60" height="auto" style="position: absolute; top: 35%; left: 15%;" >
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <button type="button" class="btn btn-outline-secondary">&nbsp; &nbsp; Music &nbsp; &nbsp; </button>
+                </div>
+
+                <div class="col-md-auto" style="  display: inline-block;
+                justify-content: space-between;">
+                    <div class="form-check form-switch"  style="  display: flex; justify-content: space-between;">
+                        <form action="music" method="get">
+                        <button class="navitem"type="submit" name="text" value="on" >PLAY</button>
+                        <button class="navitem"type="submit" name="text" value="off" >STOP</button>
+                        </form>
+                      </div>
+                </div>
+
+
+
+          </div>
+   </div>
+  </div>

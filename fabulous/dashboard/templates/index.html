@@ -1,0 +1,706 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Home Automation project</title>
+  <meta name="description" content="Home automation ">
+  <meta name="author" content="MacleLabs">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+        .navitem {
+            width: 50px;
+            height: 25px;
+            text-align: center;
+            border: gray;
+            background-color: #FFFFFF;
+<!--            color: #fff;-->
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 0%;
+            margin-bottom: 0%
+            display: inline-block;
+        }
+
+
+    .flex-parent {
+    display: flex;
+    }
+    .jc-center {
+    justify-content: center;
+    }
+
+    button.margin-right {
+    margin-right: 10px;
+    }
+    </style>
+
+</head>
+
+<body onload="myFunction()">
+
+<script>
+
+function myFunction(){
+      var startColor="#FFFFFF";
+      var startColor_1="#FFFFFF";
+      var startColor_2="#FFFFFF";
+      var startColor_3="#FFFFFF";
+      var startColor_4="#FFFFFF";
+      var startColor_5="#FFFFFF";
+      var startColor_6="#FFFFFF";
+      var startColor_7="#FFFFFF";
+      var pro=document.getElementById("button");
+      var pro1=document.getElementById("button1");
+      var pro2=document.getElementById("H");
+      var pro3=document.getElementById("M");
+      var pro4=document.getElementById("L");
+      var pro5=document.getElementById("button2");
+      var pro6=document.getElementById("button3");
+      var pro7=document.getElementById("H1");
+      var pro8=document.getElementById("M1");
+      var pro9=document.getElementById("L1");
+      var pro10=document.getElementById("button4");
+      var pro11=document.getElementById("button5");
+      var pro12=document.getElementById("H2");
+      var pro13=document.getElementById("M2");
+      var pro14=document.getElementById("L2")
+      var pro15=document.getElementById("button6");
+      var pro16=document.getElementById("button7");
+      var pro17=document.getElementById("H3");
+      var pro18=document.getElementById("M3");
+      var pro19=document.getElementById("L3");
+
+      if (localStorage.startColor=="#7FFF00"){
+      pro.style.backgroundColor = "#7FFF00";
+      pro1.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor=="#FF0000")
+      {
+      pro.style.backgroundColor = "#FFFFFF";
+      pro1.style.backgroundColor = "#FF0000";
+      }
+      if(localStorage.startColor_1=="#00008B")
+      {
+      pro2.style.backgroundColor = "#00008B";
+      pro3.style.backgroundColor = "#FFFFFF";
+      pro4.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_1=="#0000CD")
+      {
+      pro2.style.backgroundColor = "#FFFFFF";
+      pro3.style.backgroundColor = "#0000CD";
+      pro4.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_1=="#0000FF")
+      {
+      pro2.style.backgroundColor = "#FFFFFF";
+      pro3.style.backgroundColor = "#FFFFFF";
+      pro4.style.backgroundColor = "#0000FF";
+      }
+      if (localStorage.startColor_2=="#7FFF00"){
+      pro5.style.backgroundColor = "#7FFF00" ;
+      pro6.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_2=="#FF0000")
+      {
+      pro5.style.backgroundColor = "#FFFFFF";
+      pro6.style.backgroundColor = "#FF0000";
+      }
+      if(localStorage.startColor_3=="#00008B")
+      {
+      pro7.style.backgroundColor = "#00008B";
+      pro8.style.backgroundColor = "#FFFFFF";
+      pro9.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_3=="#0000CD")
+      {
+      pro7.style.backgroundColor = "#FFFFFF";
+      pro8.style.backgroundColor = "#0000CD";
+      pro9.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_3=="#0000FF")
+      {
+      pro7.style.backgroundColor = "#FFFFFF";
+      pro8.style.backgroundColor = "#FFFFFF";
+      pro9.style.backgroundColor = "#0000FF";
+      }
+      if (localStorage.startColor_4=="#7FFF00"){
+      pro10.style.backgroundColor = "#7FFF00" ;
+      pro11.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_4=="#FF0000")
+      {
+      pro10.style.backgroundColor = "#FFFFFF";
+      pro11.style.backgroundColor = "#FF0000";
+      }
+      if(localStorage.startColor_5=="#00008B")
+      {
+      pro12.style.backgroundColor = "#00008B";
+      pro13.style.backgroundColor = "#FFFFFF";
+      pro14.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_5=="#0000CD")
+      {
+      pro12.style.backgroundColor = "#FFFFFF";
+      pro13.style.backgroundColor = "#0000CD";
+      pro14.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_5=="#0000FF")
+      {
+      pro12.style.backgroundColor = "#FFFFFF";
+      pro13.style.backgroundColor = "#FFFFFF";
+      pro14.style.backgroundColor = "#0000FF";
+      }
+
+
+      if (localStorage.startColor_6=="#7FFF00"){
+      pro15.style.backgroundColor = "#7FFF00" ;
+      pro16.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_6=="#FF0000")
+      {
+      pro15.style.backgroundColor = "#FFFFFF";
+      pro16.style.backgroundColor = "#FF0000";
+      }
+      if(localStorage.startColor_7=="#00008B")
+      {
+      pro17.style.backgroundColor = "#00008B";
+      pro18.style.backgroundColor = "#FFFFFF";
+      pro19.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_7=="#0000CD")
+      {
+      pro17.style.backgroundColor = "#FFFFFF";
+      pro18.style.backgroundColor = "#0000CD";
+      pro19.style.backgroundColor = "#FFFFFF";
+      }
+      if(localStorage.startColor_7=="#0000FF")
+      {
+      pro17.style.backgroundColor = "#FFFFFF";
+      pro18.style.backgroundColor = "#FFFFFF";
+      pro19.style.backgroundColor = "#0000FF";
+      }
+
+      }
+function setColor(btn, btn1) {
+        var property = document.getElementById(btn);
+        var property1 = document.getElementById(btn1);
+        if (btn == 'button') {
+            property.style.backgroundColor = "#7FFF00";
+            property1.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor= "#7FFF00";
+        }
+        if (btn == 'button1'){
+            property.style.backgroundColor = "#FF0000";
+            property1.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor= "#FF0000";
+            }
+        if (btn == 'button2') {
+            property.style.backgroundColor = "#7FFF00";
+            property1.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_2= "#7FFF00";
+        }
+        if (btn == 'button3'){
+            property.style.backgroundColor = "#FF0000";
+            property1.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_2= "#FF0000";
+            }
+        if (btn == 'button4') {
+            property.style.backgroundColor = "#7FFF00";
+            property1.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_4= "#7FFF00";
+        }
+        if (btn == 'button5'){
+            property.style.backgroundColor = "#FF0000";
+            property1.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_4= "#FF0000";
+            }
+        if (btn == 'button6') {
+            property.style.backgroundColor = "#7FFF00";
+            property1.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_6= "#7FFF00";
+        }
+        if (btn == 'button7'){
+            property.style.backgroundColor = "#FF0000";
+            property1.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_6= "#FF0000";
+            }
+         }
+
+
+function setColorHML(btn,btn1,btn2) {
+        var property = document.getElementById(btn);
+        var property1 = document.getElementById(btn1);
+        var property2 = document.getElementById(btn2);
+        if (btn == 'H') {
+            property.style.backgroundColor = "#00008B";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_1= "#00008B";
+        }
+        if (btn == 'M'){
+            property.style.backgroundColor = "#0000CD";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_1= "#0000CD";
+        }
+        if (btn == 'L'){
+            property.style.backgroundColor = "#0000FF";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_1= "#0000FF";
+            }
+        if (btn == 'H1') {
+            property.style.backgroundColor = "#00008B";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_3= "#00008B";
+        }
+        if (btn == 'M1'){
+            property.style.backgroundColor = "#0000CD";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_3= "#0000CD";
+        }
+        if (btn == 'L1'){
+            property.style.backgroundColor = "#0000FF";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_3= "#0000FF";
+        }
+        if (btn == 'H2') {
+            property.style.backgroundColor = "#00008B";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_5= "#00008B";
+        }
+        if (btn == 'M2'){
+            property.style.backgroundColor = "#0000CD";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_5= "#0000CD";
+        }
+        if (btn == 'L2'){
+            property.style.backgroundColor = "#0000FF";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_5= "#0000FF";
+        }
+
+        if (btn == 'H3') {
+            property.style.backgroundColor = "#00008B";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_7= "#00008B";
+        }
+        if (btn == 'M3'){
+            property.style.backgroundColor = "#0000CD";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_7= "#0000CD";
+        }
+        if (btn == 'L3'){
+            property.style.backgroundColor = "#0000FF";
+            property1.style.backgroundColor = "#FFFFFF";
+            property2.style.backgroundColor = "#FFFFFF";
+            localStorage.startColor_7= "#0000FF";
+        }
+
+    }
+
+
+</script>
+
+
+<div >
+       <form  id="login-form"  method="post"
+      action="{% url 'login_user' %}">
+        <div class="form-group" style="display: flex; padding-left: 1050px;">
+      {% csrf_token %}
+      <input id="id_username" name="username" 
+      type="hidden" value="test" class="form-control" >
+        <label for="exampleInputPassword1">Pin &nbsp;</label>
+
+        <input type="password" style="height:30px"  maxlength="4" class="form-control" name="password" id="password" placeholder="Pin">
+        &nbsp;   <input class="btn btn-primary" style="margin-bottom: 20px;" type="submit" value="Submit">
+        {% if form.errors %}
+                    <p class=" label label-danger">
+                        Your username and password didn't match. 
+                        Please try again.
+                    </p>
+                {% endif %}
+      </div> </form></div>
+<div>
+   <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="{% static 'logo3.png' %}" alt="" width="120" height="auto">
+          </a>
+            <div style="align-content: flex-end;" >
+<div class="flex-parent jc-center">
+
+          <form action="index1">
+           <a class="navbar-brand" >
+
+           <button type="submit"  style="background-color:transparent; border-color:transparent;">
+                  <img src="{% static 'bulb.png' %}" alt="" width="30" height="auto">
+              </button>
+
+          </a>
+              </form>
+         <form action="fan11">
+          <a class="navbar-brand" >
+
+             <button type="submit"  style="background-color:transparent; border-color:transparent; ">
+                 <img src="{% static 'fan.png' %}" alt="" width="30" height="auto">
+             </button>
+
+          </a>
+             </form>
+           <form action="garage1">
+          <a class="navbar-brand" href="#">
+
+              <button type="submit" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'gd.png' %}" alt="" width="30" height="auto">
+                  </button>
+
+          </a>
+               </form>
+          <form action="camera1">
+           <a class="navbar-brand" href="#">
+
+              <button type="submit"  style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'camera.png' %}" alt="" width="30" height="auto">
+              </button>
+
+          </a>
+              </form>
+           <form action="music1">
+          <a class="navbar-brand" href="#">
+              <button type="submit" style="background-color:transparent; border-color:transparent; ">
+            <img src="{% static 'music.png' %}" alt="" width="30" height="auto">
+              </button>
+          </a>
+               </form>
+       </div>
+</div>
+        </div>
+      </nav>
+
+
+        <div class="container"
+             {% if user.is_authenticated %} style=" " {% else %}
+             style="pointer-events:none;"
+             {% endif %}>
+             <img src="{% static 'bulb.png' %}" alt="" width="60" height="auto" style="position: absolute; top: 35%; left: 15%;" >
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <button type="button" class="btn btn-outline-secondary">&nbsp; &nbsp; Room  1&nbsp; &nbsp; </button>
+                </div>
+
+                <div class="col-md-auto" style="  display: inline-block;
+                justify-content: space-between;">
+                    <div class="form-check form-switch"  style="  display: flex; justify-content: space-between;">
+                        <form action="light" method="get">
+                        <button class="navitem"type="submit" name="text" value="on" id="button" onclick="setColor('button','button1');" >ON</button>
+                        <button class="navitem"type="submit" name="text" value="off" id="button1" onclick="setColor('button1','button');" >OFF</button>
+                        </form>
+                      </div>
+                </div>
+
+                <div class="col-md-auto" style="display: flex;
+                justify-content: space-between;">
+                    <div class="form-check">
+                        <form action="light1" method="get">
+                        <button class="navitem" type="submit" name="text" value="H" id="H" onclick="setColorHML('H','M','L');">H</button>
+                        <button class="navitem" type="submit" name="text" value="M" id="M" onclick="setColorHML('M','H','L');" >M</button>
+                        <button class="navitem"type="submit" name="text" value="L" id="L" onclick="setColorHML('L','H','M');">L</button>
+                        </form>
+                      </div>             </div>
+              </div>
+              <div class="row justify-content-md-center" style="margin-top: 10px;">
+                <div class="col-md-auto">
+
+                    <button type="button"  class="btn btn-outline-secondary">&nbsp; &nbsp; Room  2&nbsp; &nbsp; </button>
+                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check form-switch" style="  display: flex;
+                    justify-content: space-between;">
+                        <form action="light2" method="get">
+                        <button class="navitem"type="submit" name="text2" value="on" id="button2" onclick="setColor('button2', 'button3');" >ON</button>
+                        <button class="navitem"type="submit" name="text2" value="off" id="button3" onclick="setColor('button3', 'button2');" >OFF</button>
+                        </form>
+                      </div>                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check">
+                        <form action="light3" method="get">
+                        <button class="navitem" type="submit" name="text" value="H" id="H1" onclick="setColorHML('H1','M1','L1');">H</button>
+                        <button class="navitem" type="submit" name="text" value="M" id="M1" onclick="setColorHML('M1','H1','L1');" >M</button>
+                        <button class="navitem"type="submit" name="text" value="L" id="L1" onclick="setColorHML('L1','H1','M1');">L</button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+              <div class="row justify-content-md-center" style="margin-top: 10px;" >
+                <div class="col-md-auto">
+                    <button type="button"  class="btn btn-outline-secondary">&nbsp; &nbsp;  Room  3 &nbsp; &nbsp; </button>
+                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check form-switch" style="  display: flex;
+                    justify-content: space-between;">
+                        <form action="light4" method="get">
+                        <button class="navitem"type="submit" name="text2" value="on" id="button4" onclick="setColor('button4', 'button5');" >ON</button>
+                        <button class="navitem"type="submit" name="text2" value="off" id="button5" onclick="setColor('button5', 'button4');" >OFF</button>
+                        </form>
+                      </div>                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check">
+                      <form action="light5" method="get">
+                          <button class="navitem" type="submit" name="text" value="H" id="H2" onclick="setColorHML('H2','M2','L2');">H</button>
+                        <button class="navitem" type="submit" name="text" value="M" id="M2" onclick="setColorHML('M2','H2','L2');" >M</button>
+                        <button class="navitem"type="submit" name="text" value="L" id="L2" onclick="setColorHML('L2','H2','M2');">L</button>
+                      </form>
+                </div>             </div>
+              </div>
+              <div class="row justify-content-md-center"  style="margin-top: 10px;">
+                <div class="col-md-auto">
+                    <button type="button"  style="padding: 7px 16px;"  class="btn btn-outline-secondary"> &nbsp;  All Room &nbsp;  </button>
+                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check form-switch" style="  display: flex;
+                    justify-content: space-between;">
+                        <form action="light6" method="get">
+                         <button class="navitem"type="submit" name="text2" value="on" id="button6" onclick="setColor('button6', 'button7');" >ON</button>
+                        <button class="navitem"type="submit" name="text2" value="off" id="button7" onclick="setColor('button7', 'button6');" >OFF</button>
+                        </form>
+                      </div>                </div>
+                <div class="col-md-auto" style="  display: flex;
+                justify-content: space-between;">
+                    <div class="form-check">
+                        <form action="light7" method="get">
+                        <button class="navitem" type="submit" name="text" value="H" id="H3" onclick="setColorHML('H3','M3','L3');">H</button>
+                        <button class="navitem" type="submit" name="text" value="M" id="M3" onclick="setColorHML('M3','H3','L3');" >M</button>
+                        <button class="navitem"type="submit" name="text" value="L" id="L3" onclick="setColorHML('L3','H3','M3');">L</button>
+                        </form>
+                      </div>             </div>
+              </div>
+          </div>
+   </div>
+    <footer class="footer" style="  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;">
+    <div style="  display: flex;
+    justify-content: space-between;">
+        <div class="container" style="margin-bottom: 10px;">
+
+          <span class="text-dark">{% now "D jS F Y H:i:s" %} GMT-0600  (Central Standard Time)</span>
+
+
+          <button type="button"  class="btn btn-outline-dark" style="margin-left:400px; "><p>&nbsp; &nbsp;</p>  Exit <p id="result"> &nbsp; &nbsp; </p></button>
+
+
+
+
+        </div>
+    </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    {%include 'session_security/all.html'%}
+    <script>
+<!--        function show(shown, hidden, hidden1, hidden2, hidden4) {-->
+<!--            document.getElementById(shown).style.display='block';-->
+<!--            document.getElementById(hidden).style.display='none';-->
+<!--            return false;-->
+<!--        }-->
+
+      function fetchdata(){
+        
+        $.get("/session_security/ping/?idleFor", function(data){
+                  // Display the returned data in browser
+                  $("#result").html(data);
+              });
+      }
+      $(document).ready(function(){
+        setInterval(fetchdata,1000);
+
+
+            
+          });
+       
+$(function()
+    {
+      $('#flexSwitchCheckDefault1').change(function()
+      {
+        if ($(this).is(':checked')) {
+           // Do something...
+           searchWord = document.getElementById('flexSwitchCheckDefault1').value;
+           window.location.href = "{% url 'view_detail' %}" + "?search="+searchWord;
+
+
+
+
+
+           $(".input1").prop('disabled', false);
+
+        }
+        else{
+          $(".input1").prop('disabled', true);
+
+        }
+        ;
+      });
+    });
+          
+$(function()
+    {
+      $('#flexSwitchCheckDefault2').change(function()
+      {
+        if ($(this).is(':checked')) {
+           // Do something...
+           $(".input2").prop('disabled', false);
+
+        }
+        else{
+          $(".input2").prop('disabled', true);
+
+        }
+        ;
+      });
+    });
+          
+$(function()
+    {
+      $('#flexSwitchCheckDefault3').change(function()
+      {
+        if ($(this).is(':checked')) {
+           // Do something...
+           $(".input3").prop('disabled', false);
+
+        }
+        else{
+          $(".input3").prop('disabled', true);
+
+        }
+        ;
+      });
+    });
+    $(function()
+    {
+      $('#flexRadioDefaultHigh').change(function()
+      {
+        if ($(this).is(':checked')) {
+           // Do something...
+           $("input[type='radio'][id='flexRadioDefault1Med']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault2Med']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault3Med']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault1Low']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault2Low']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault3Low']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault1High']").attr("checked", true);
+           $("input[type='radio'][id='flexRadioDefault2High']").attr("checked", true);
+           $("input[type='radio'][id='flexRadioDefault3High']").attr("checked", true);
+
+
+          
+
+        }
+      
+        ;
+      });
+    });
+    $(function()
+    {
+      $('#flexRadioDefaultMedium').change(function()
+      {
+        if ($(this).is(':checked')) {
+           // Do something...
+           $("input[type='radio'][id='flexRadioDefault1Low']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault2Low']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault3Low']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault1High']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault2High']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault3High']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault1Med']").attr("checked", true);
+           $("input[type='radio'][id='flexRadioDefault2Med']").attr("checked", true);
+           $("input[type='radio'][id='flexRadioDefault3Med']").attr("checked", true);
+
+
+          
+
+        }
+      
+        ;
+      });
+    });
+    $(function()
+    {
+      $('#flexRadioDefaultLow').change(function()
+      {
+        if ($(this).is(':checked')) {
+           // Do something...
+           $("input[type='radio'][id='flexRadioDefault1High']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault2High']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault3High']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault1Med']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault2Med']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault3Med']").attr("checked", false);
+           $("input[type='radio'][id='flexRadioDefault1Low']").attr("checked", true);
+           $("input[type='radio'][id='flexRadioDefault2Low']").attr("checked", true);
+           $("input[type='radio'][id='flexRadioDefault3Low']").attr("checked", true);
+
+
+          
+
+        }
+        
+      
+        ;
+      });
+    });
+    $(function()
+    {
+      $('#flexSwitchCheckDefault4').change(function()
+      {
+        if ($(this).is(':checked')) {
+           // Do something...
+           $(".check").prop('checked', true);
+           $(".input1").prop('disabled', false);
+           $(".input2").prop('disabled', false);
+           $(".input3").prop('disabled', false);
+
+           $(".input4").prop('disabled', false);
+
+        }
+        else{
+          $(".check").prop('checked', false);
+          $(".input1").prop('disabled', true);
+           $(".input2").prop('disabled', true);
+           $(".input3").prop('disabled', true);
+          $(".input4").prop('disabled', true);
+
+        }
+        ;
+      });
+    });
+
+
+      </script>
+</body>
+</html>
